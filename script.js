@@ -1,12 +1,17 @@
-alert("Press any key to display its information below")
-
-const code = document.getElementById("code");
-const key = document.getElementById("key");
-const which = document.getElementById("which");
+const codeText = document.getElementById("code");
+const keyText = document.getElementById("key");
+const whichText = document.getElementById("which");
 
 // window.addEventListener("keydown", update(e));
 window.addEventListener('keydown', function (e) {
-    code.innerHTML = (e.code).toString();
-    key.innerHTML = (e.key).toString();
-    which.innerHTML = (e.which).toString();;
+    codeText.innerHTML = (e.code).toString();
+    keyText.innerHTML = (e.key).toString();
+    whichText.innerHTML = (e.which).toString();;
   }, false);
+
+  const button = document.getElementById("continue");
+  const container = document.getElementById("welcome");
+
+  button.addEventListener("click", () => {
+    container.style.display = "none";
+  })
